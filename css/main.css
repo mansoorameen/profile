@@ -1,0 +1,31 @@
+.head {
+    background-color: blue;
+    color: white;
+    height: 100vh;
+    border-radius: rounded;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-head {
+     margin: 10px;
+}
+
+.img {
+    border-radius: 50%;
+    border-color: black;
+    height: 200px;
+    width: 200px;
+    align-self: center;
+}
+
+body {
+    margin: 0%;
+}
+
+.linked {
+    color: white;
+}
