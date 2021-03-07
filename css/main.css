@@ -9,10 +9,12 @@
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
+    
 }
 
 .hero {
     padding: 2rem;
+    padding-top: 2 rem;
 }
 
 .hero .hero-img {
@@ -32,6 +34,13 @@ body {
     color: var(--primary-color);
 }
 
+.degree-text {
+    text-align: center;
+    font-size: small;
+    color: var(--dark-grey);
+  
+}
+
 hr {
     margin: 2rem 0rem;
 }
@@ -48,11 +57,16 @@ hr {
 
 .section {
     padding: 2rem;
+    text-align: left;
 }
 
-.section h3 {
+.section h2 {
     text-align: center;
     
+}
+
+.section-p {
+    padding: 2rem;
 }
 
 .ow {
@@ -75,6 +89,7 @@ hr {
     color: var(--primary-color);
     border-radius: 0.5rem;
     border: 1px solid var(--primary-color);
+    
 }
 
 .non-bullet {
