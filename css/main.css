@@ -9,7 +9,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0px;
-    
+
 }
 
 .hero {
@@ -38,7 +38,7 @@ body {
     text-align: center;
     font-size: small;
     color: var(--dark-grey);
-  
+
 }
 
 hr {
@@ -62,7 +62,7 @@ hr {
 
 .section h2 {
     text-align: center;
-    
+
 }
 
 .section-p {
@@ -89,7 +89,7 @@ hr {
     color: var(--primary-color);
     border-radius: 0.5rem;
     border: 1px solid var(--primary-color);
-    
+
 }
 
 .non-bullet {
@@ -111,6 +111,7 @@ hr {
 .navigation .link {
     color: white;
 }
+
 .navigation .navbrand {
     font-weight: bold;
 }
@@ -133,9 +134,9 @@ hr {
 
 .footer .link {
     color: white;
-   
+
 }
 
 .footer ul {
-    padding-inline-start: 0px ;
+    padding-inline-start: 0px;
 }
