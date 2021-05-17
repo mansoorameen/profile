@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css" class="css">
+    <title>blogs | mansoorameen</title>
+</head>
+
+<body>
+    <nav class="navigation container">
+        <div class="navbrand">
+            <p>mansoorameen</p>
+        </div>
+        <ul class="non-bullet nav-pills">
+            <li class="inline-list"><a class="link" href="/">home</a> </li>
+            <li class="inline-list"><a class="link" href="/projects.html">projects</a> </li>
+            <li class="inline-list"><a class="link link-active" href="/blogs.html">blogs</a> </li>
+            <li class="inline-list"><a class="link" href="/about.html">about me</a> </li>
+
+        </ul>
+    </nav>
+
+    <section class="section">
+        <div class="container container-center">
+            <h1><br><center>Using The Most From Your Android Mobile</center></h1>
+            <img src="/images/working.png" height="100%" width="100%">
+            <p>So you are into JS, and have been wondering how JS works?<br>
+                Well, you are in the right place. <em>Welcome!</em><br>
+                <br>
+                <h3><em>" JavaScript is a 'synchronous single-threaded' language "</em></h3><br>
+                You have read this somewhere, and what does this mean?
+                 <br>Just go on reading, and you will learn it along the way. <br><br>
+                I started coding, building small projects, and
+                I used to think- <em>what happens when I run a code? How JS works? What magic happens in the background?</em><br>
+                <br>
+
+                <strong>Today, let's understand how js works.</strong> I will give a simple explanation from my limited knowledge.<br>
+                <br>Say you coded a small program - declared variables, created fn, etc.,
+                and you run it via your browser. So how does the browser knows JS?
+                <em>How can it run your code?</em>
+                <br><br> Well, the good thing is that every major browser have their own JS engine inside the browser.
+                <em>Why do they have a JS engine?</em><br> Because most of the websites are created using JS, and the browser needs
+                to interact with the webpage and run JS efficiently.<br><br>
+                <em> Okay, which JS engine do the browsers use?</em><br>
+                 Most browsers have developed their own JS engine.<br>
+                Chrome uses V8 engine built by Google<br>
+                Firefox has Spidermonkey<br>
+                Safari has Nitro<br>
+                and so on.<br><br>
+
+                Now you know why some browsers do the job well and others not.<br>
+
+                <br>Now that said, let's get back to running our code.<br>
+
+                    <br>Say we have a small code:<br><br>
+
+                    <div style="background-color: rgb(6, 2, 22); color: white; padding: 0.5rem;">var a = 2;<br>
+                    var b = 4;<br>
+                    function add() {<br>
+                    var ans = a + b; <br>
+                    return ans;
+
+                    add();<br>
+                    </div><br>
+
+                    <br>
+                    
+                    When we run this, An <strong>Execution Context(Global Context)</strong> 
+                     is created by JS as the first step before executing the code. 
+                Think of this as a big box. This is where everything in JS happens. <br><br>
+                Now this Execution Context is passed to what is called a <strong>Call Stack</strong>  
+                - where the main execution happens. Remember this. Think of Call Stack as a table where we 
+                keep boxes on top of another.<br>
+
+                <br>Now we know a Global Context is created when we run the code, 
+                and this Global Context is passed to a Call Stack for execution.<br>
+
+                <br>Now let's see what happens inside the Global Context. <br>
+                <br>The Global Context is created in two phases:<br><br>
+                 1) <strong><em><u>Memory Component</u></em></strong>  - this is where all the variables and functions are 
+                 stored as <strong><small><em>key : value</em></small></strong> pair. Key can be variable and value is its current value.<br><br>
+                  Here in the first phase, variable 'a' will be stored as 'undefined'.<br>
+                    This is stored in the Memory Component as- <strong><small>a : undefined</small></strong>.<br><br>
+                Here the values for these variables are not assigned by the Memory component. That happens in the next phase.<br>
+                For now, variables are assigned as 'undefined', and for functions, the whole code inside the function itself is added.<br><br>
+
+                2) <strong><em><u>Code Component</u></em></strong> - this is where the execution of each line of code happens.<br> In this phase, the values are assigned to the variables. <br><br>
+                
+                Now the value of 'a' becomes 2 from 'undefined', and will be stored as-  <strong><small>a : 2</small></strong>
+                <br><br>JS executes the code one line at a time. JS can't do tasks more than one at a time.
+                So here it is, this is what <strong><em>single threaded</em></strong> means.<br><br>
+                JS executes code in a specific order. The first line is executed and only when this is finished it goes for the next line.
+                It cannot jump to 3rd line before executing the 2nd line. 
+                This is known as <strong><em>synchronous</em></strong>.<br><br> So there you go - <strong>'synchronous single-threaded'</strong>.
+
+                <br><br>Now when it meets a function, a new Execution Context like the first one is created inside the first Execution Context, with the same two phases, and the procedure is the same.<br><br> Now at the same moment, this new Execution Context is passed to our Call Stack.<br> That is a new box is kept on top of another box that is on the table.<br><br>
+            Now our Call Stack has the first Execution Context at the bottom and on top of it this new Execution Context is passed. JS tries to quickly execute whatever comes to the Call Stack without waiting for anything. After the execution, this new Execution Context is deleted and it is also popped out from Call Stack.<br> This happens every time a function is met inside the code.
+
+            <br> <br>Now after functions are done, it moves to the next line, and finally, the first Global Execution Context is also deleted and popped out from Call stack. Hence the Call Stack also gets empty.<br><br>
+
+
+            Okay, let's look at this. <em>What would have happened if there were two functions in the Global Execution Context?</em><br> 
+            Yes, you guessed it right.<br><br> 
+            Two new Execution Contexts will be created and does the same thing as explained above.<br> 
+            But remember, it doesn't form the two new Execution Context together, but first completes the first function and it is deleted.<br> And only then it goes to the next function.
+
+
+            <br><br> Simple right?<br><br>
+
+            Now think about this. <em>What if there is a function inside a function?</em><br>
+            I guess you got this too.<br><br>
+            In this case, there will be 3 Execution Contexts, and also these 3 will be passed to Call Stack.<br>
+             The Execution Context of the third function will be on the top of the Call Stack followed by the other two on the bottom.<br>
+            First our Global Execution Context, inside this second is the main function, and the third will be the function inside this main function.<br>
+             And then after execution each of them will be deleted one by one.<br><br>
+
+             
+            This is how code inside JS works.<br>
+            I have tried to explain this in the best possible way. <br>
+            Read it again if you couldn't grasp it at the first time you read.<br><br>
+             Thank you for reading!<br><br>
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-header"><h3>social media presence</h3></div>
+        <ul class="social-links non-bullet">
+            <li class="inline-list"><a class="link" style="background-color: red;" href="https://instagram.com/mzee.dev">instagram</a></li>
+            <li class="inline-list"><a class="link" style="background-color: blue;" href="https://linkedin.com/in/mansoorameenkm">linkedin</a></li>
+            <li class="inline-list"><a class="link" style="background-color: black;" href="https://github.com/mansoorameen">gitHub</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>
