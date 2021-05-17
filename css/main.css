@@ -114,9 +114,16 @@ hr {
 
 .navigation .navbrand {
     font-weight: bold;
+    position: absolute;
 }
 
+/* .menu {
+    position: relative;
+} */
+
+
 .navigation .nav-pills {
+    position: relative;
     text-align: right;
 }
 
@@ -126,7 +133,7 @@ hr {
 
 .footer {
     background-color: var(--primary-color);
-    padding: 2rem 1rem;
+    padding: 0.5rem;
     color: white;
     text-align: center;
     border-top-right-radius: 1rem;
