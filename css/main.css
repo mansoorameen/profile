@@ -147,3 +147,7 @@ hr {
 .footer ul {
     padding-inline-start: 0px;
 }
+
+.icon {
+    width: 30px;
+}
