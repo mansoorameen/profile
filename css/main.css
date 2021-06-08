@@ -113,7 +113,6 @@ hr {
 }
 
 .navigation .navbrand {
-    font-weight: bold;
     position: absolute;
 }
 
@@ -148,6 +147,10 @@ hr {
     padding-inline-start: 0px;
 }
 
+.icon-main {
+    width: 50px;
+    padding-left: 1rem;
+}
 .icon {
     width: 30px;
 }
