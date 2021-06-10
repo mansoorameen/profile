@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: mansoorameen.netlify.app
+Token: 2520a314eaf0ae71e99f17da750dbc2c8625d0fc0e127b53cc7eb1b5c2d895ab
