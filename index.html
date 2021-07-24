@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme>-color" content="#0000ff"/>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+  />
     <link rel="stylesheet" href="css/main.css" class="css">
     <meta name="monetization" content="$ilp.uphold.com/hhPr84Z89hqB" />
     <title>Portfolio</title>
 </head>
 <body>
     <!-- <h2>@nav</h2> -->
-    <nav class="navigation container">
+    <!-- <nav class="navigation container">
+        <div></div>
         <div class="navbrand">
             <img class="icon-main" src="/images/mainlogo.svg">
         </div>
@@ -22,17 +27,61 @@
         <li class="inline-list"><a class="link" href="/about.html">about me</a> </li>
     </ul>
     </div>
-    
+    </nav> -->
+
+    <!-- for mobile -->
+    <nav>
+    <div class="nav-center">
+
+        <div class="nav-header">
+            <a href="/">
+              <img src="/images/mainlogo.svg" alt="logo" height="50px"/>
+            </a>
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+  
+        <ul class="links">
+          <li>
+            <a class="link-active" href="/">home</a>
+          </li>
+          <li>
+            <a href="/projects.html">projects</a>
+          </li>
+          <li>
+            <a href="blogs.html">blogs</a>
+          </li>
+          <li>
+            <a href="about.html">about me</a>
+          </li>
+        </ul>
+    </div>
     </nav>
+
+        <!-- for mobile -->
+    
 
     <!-- <h1>@header</h1> -->
     <header class="hero">
         
-        <img class="hero-img" src="/images/img.jpg">
-        <h1 class="hero-heading">Manzoor, <span class="heading-highlight">Web Dev</span> </h1>
-        <p class="container container-center">Feedbacks are welcomed and loved, also read more <a href="/about.html" class="linked">about me from here.</a></p>
-        <!-- Feedbacks are welcomed and loved, also connect with me on <a href="https://instagram.com/mzee.dev" class="linked">Instagram -->
+        <div class="HeadText">
+            <h1 class="hero-heading">
+            Hi<img src="/images/hand.gif" height="30rem" width="30rem">, I am<br>
+                <span class="heading-highlight">Mansoor Ameen</span> <br> 
+                Frontend Developer
+            </h1>
+        
+            </div>
+            <div class="myimage">
+        <img class="hero-img" src="/images/img.jpg" height="160rem" width="160rem">
+                 </div>
+
      </header>
+     <div class="mailme">
+        contact me:
+        <a href="mailto:manzooravail@gmail.com"> manzooravail@gmail.com</a>
+     </div>
 
      <section class="section ow">
         <div class="container container-center">
@@ -52,7 +101,7 @@
      <section class="section ow">
          <div class="container container-center">
             <h1>blogs</h1>
-            <p>I am also working on some technical and non techincal blogs. I like to document my journey of learning.</p>
+            <p>I also write technical blogs. I like to document my journey of learning.</p>
             <a class="link primarylink" href="/blogs.html">see blogs</a>
             <br>
             <br>
@@ -62,14 +111,16 @@
 
 
      <footer class="footer">
-        <div class="footer-header"><h3>social media presence</h3></div>
-        <ul class="social-links non-bullet">
+        <div class="footer-header"><h3>connect with me on</h3></div>
+        <ul class="social-links">
             <!-- <li class="inline-list"><a class="link" href="https://instagram.com/mzee.dev"><img class="icon" src="./images/instagram.svg"></a></li> -->
-            <li class="inline-list"><a class="link" href="https://linkedin.com/in/mansoorameenkm"><img class="icon" src="./images/linkedin.svg"></a></li>
-            <li class="inline-list"><a class="link" href="https://github.com/mansoorameen"><img class="icon" src="./images/github.svg"></a></li>
-            <li class="inline-list"><a class="link" href="https://twitter.com/mansoorameenkm"><img class="icon" src="./images/twitter.svg"></a></li>
-            <li class="inline-list"><a class="link" href="https://mansoorameen.hashnode.dev/"><img class="icon" src="./images/hashnode.svg"></a></li>
+            <li><a href="https://linkedin.com/in/mansoorameenkm"><img class="icon" src="./images/linkedin.svg"></a></li>
+            <li ><a href="https://github.com/mansoorameen"><img class="icon" src="./images/github.svg"></a></li>
+            <li ><a href="https://twitter.com/mansoorameenkm"><img class="icon" src="./images/twitter.svg"></a></li>
+            <li ><a href="https://mansoorameen.hashnode.dev/"><img class="icon" src="./images/hashnode.svg"></a></li>
         </ul>
     </footer>
+
+    <script src="/script.js"></script>
 </body>
 </html>
