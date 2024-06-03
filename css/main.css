@@ -21,18 +21,14 @@ body {
 }
 
 .hero .hero-img {
-  /* max-width: 350px; */
   margin: auto;
   border-radius: 20rem;
   place-items: center;
 }
 
 .hero .hero-heading {
-  /* text-align: center; */
   color: var(--dark-grey);
   padding: 0 1rem 0 1rem;
-  /* border: 1px solid black; */
-  /* margin: 5rem; */
 }
 
 .hero .heading-highlight {
@@ -93,38 +89,6 @@ hr {
   border: 1px solid var(--primary-color);
 }
 
-/* 
-.non-bullet {
-    list-style: none;
-}
-
-.inline-list {
-    display: inline;
-    padding: 1rem;
-    display: none;
-}
-
-.navigation {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1rem;
-}
-
-.navigation .link {
-    color: white;
-}
-
-.navigation .navbrand {
-    position: absolute;
-}
-
-
-.navigation .nav-pills {
-    position: relative;
-    text-align: right;
-}
-*/
-
 .footer {
   background-color: #252324;
   padding: 0.5rem;
@@ -139,12 +103,7 @@ hr {
 .footer ul {
   padding-inline-start: 0px;
 }
-/* 
-.icon-main {
-    width: 5rem;
-    padding: 0;
-    margin: 0;
-} */
+
 .icon {
   width: 30px;
   background: white;
@@ -221,7 +180,7 @@ nav {
 }
 
 .show-links {
-  height: 7rem;
+  height: 10rem;
 }
 
 /* GitHub button styles */
@@ -285,13 +244,6 @@ nav {
     display: block;
   }
 
-  /* .inline-list {
-        display: inline;
-        padding: 1rem;
-    } */
-
-  /* for mobile */
-
   .nav-center {
     max-width: 1170px;
     margin: 0 auto;
@@ -328,21 +280,4 @@ nav {
   .link-active {
     font-weight: bold;
   }
-
-  /*     
-      .social-icons {
-        display: flex;
-      }
-    
-      .social-icons a {
-        margin: 0 0.5rem;
-        transition: var(--transition);
-        color: gray;
-      }
-    
-      .social-icons a:hover {
-        color: black;
-      } */
-
-  /* for mobile */
 }
