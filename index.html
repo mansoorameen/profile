@@ -19,7 +19,7 @@
     <link rel="icon" type="image/svg" href="/images/mainlogo.svg" />
   </head>
   <body>
-    <nav>
+    <!-- <nav>
       <div class="nav-center">
         <div class="nav-header">
           <a href="/">
@@ -47,15 +47,15 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
 
     <header class="hero">
       <div class="HeadText">
         <h1 class="hero-heading">
-          Hi<img src="./images/hand.gif" height="30rem" width="30rem" />, I
-          am<br />
+          Hi<img src="./images/hand.gif" height="30rem" width="30rem" />, I am
           <span class="heading-highlight">Mansoor Ameen</span> <br />
-          Frontend Developer
+          A Frontend Developer with 4+ years of experience building high-quality
+          web and mobile applications — from concept to production 🚀
         </h1>
       </div>
       <div class="myimage">
@@ -67,47 +67,166 @@
         />
       </div>
     </header>
-    <div class="mailme">
-      contact me:
-      <a href="mailto:manzooravail@gmail.com" target="_blank">
-        manzooravail@gmail.com</a
+
+    <div class="contact-container">
+      <a
+        class="linkedin"
+        href="https://www.linkedin.com/in/mansoorameenkm/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
+        <i class="fab fa-linkedin"></i>
+        Contact me on LinkedIn
+      </a>
     </div>
 
     <section class="section ow">
       <div class="container container-center">
-        <h1>technologies</h1>
-        <p>
-          Vanilla JavaScript, ReactJS, React Native, NextJS, TypeScript <br />
-          NodeJS, ExpressJS, MongoDB, Firebase, Rest API <br />
-          Git, HTML, CSS, WordPress, Web Hosting
-        </p>
+        <h1><i class="fas fa-code"></i> My Expertise</h1>
+        <div class="highlights">
+          <ul>
+            <li>
+              Migrated legacy codebase to React.js functional components
+              improving performance by 40%
+            </li>
+            <li>Built React Native app with 1.5k+ downloads</li>
+            <li>Worked on realtime chat UI implementation</li>
+            <li>Built a SaaS web app from scratch using Next.js</li>
+          </ul>
+        </div>
+        <!-- <p>
+          Frontend Developer with primary focus on React and JavaScript<br /><br /> -->
+        <a
+          href="https://docs.google.com/document/d/1ZGxBr2mUVSRxOU6l7IFxTEEZ0vYpU--6Dh2ZV_8lDk4/edit?usp=sharing"
+          target="_blank"
+        >
+          View Resume</a
+        >
+        <!-- </p> -->
+
+        <div class="tech-stack">
+          <span><i class="fab fa-react"></i> ReactJS</span>
+          <span><i class="fab fa-react"></i> React Native</span>
+          <span><i class="fab fa-js-square"></i> NextJS</span>
+          <span><i class="fab fa-js"></i> JavaScript</span>
+          <span><i class="fas fa-palette"></i> Material UI</span>
+          <span><i class="fas fa-plug"></i> API Integration</span>
+          <span><i class="fab fa-git-alt"></i> Git</span>
+          <span><i class="fab fa-figma"></i> Figma</span>
+          <span><i class="fas fa-envelope-open-text"></i> Postman</span>
+        </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- <section class="section">
       <div class="container container-center">
         <h1>projects</h1>
         <p>take a look at the projects that I have been working on</p>
         <a class="link primarylink" href="/projects.html">see projects</a>
       </div>
+    </section> -->
+
+    <section class="section">
+      <div class="container container-center">
+        <h1><i class="fas fa-folder-open"></i> Projects</h1>
+
+        <div class="project-cards">
+          <div class="project-card">
+            <h3>User Authentication Flow</h3>
+            <p>
+              Explored development beyond React by building a user
+              authentication system using TypeScript and Progressive Web App
+              (PWA) features, enhancing type safety and offline-first
+              capabilities while implementiing unit tests.
+            </p>
+            <p>
+              <strong>Tech Stack:</strong> Next.js, TypeScript, Jest,
+              Progressive Web App (PWA)
+            </p>
+
+            <a href="https://auth-flow-three.vercel.app/" target="_blank"
+              >Live Demo</a
+            >
+            |
+            <a href="https://github.com/mansoorameen/auth-flow" target="_blank"
+              >GitHub</a
+            >
+          </div>
+
+          <div class="project-card">
+            <h3>Chrome Extension</h3>
+            <p>
+              A Chrome extension that highlights 'coronavirus' words on any
+              webpage, making it easier to quickly spot relevant content.
+            </p>
+            <p>
+              <strong>Tech Stack:</strong> JavaScript, HTML, CSS, Chrome APIs
+            </p>
+            <a
+              href="https://github.com/mansoorameen/chrome-extension-coronavirus-word-highlight"
+              target="_blank"
+            >
+              GitHub Repo
+            </a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section ow">
       <div class="container container-center">
-        <h1>blogs</h1>
-        <p>
-          I also write technical blogs. I like to document my journey of
-          learning.
-        </p>
+        <h1><i class="fas fa-pen"></i> Blogs</h1>
+
+        <div class="blog-cards">
+          <div class="blog-card">
+            <h3>How JavaScript Works (1.9K views)</h3>
+            <p>Learn how JS works under the hood</p>
+            <a
+              href="https://mansoorameen.hashnode.dev/how-javascript-works"
+              target="_blank"
+              >Read More</a
+            >
+          </div>
+          <div class="blog-card">
+            <h3>Function Currying</h3>
+            <p>The power of function currying</p>
+            <a
+              href="https://mansoorameen.hashnode.dev/function-currying-explained"
+              target="_blank"
+              >Read More</a
+            >
+          </div>
+          <div class="blog-card">
+            <h3>Understanding "Closures" and Lexical Environment</h3>
+            <p>Deatiled explanation of closure</p>
+            <a
+              href="https://mansoorameen.hashnode.dev/understanding-closures-and-lexical-environment"
+              target="_blank"
+              >Read More</a
+            >
+          </div>
+        </div>
+
+        <br />
+        <br />
+
         <a
           class="link primarylink"
           href="https://mansoorameen.hashnode.dev/"
           target="_blank"
+        >
+          See All Blogs
+        </a>
+
+        <!-- <a
+          class="link primarylink"
+          href="https://mansoorameen.hashnode.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
           >see blogs</a
         >
         <br />
-        <br />
+        <br /> -->
       </div>
     </section>
 

@@ -116,8 +116,27 @@ hr {
   display: none;
 }
 
-.mailme {
+.contact-container {
   text-align: center;
+  margin-bottom: 1rem;
+}
+
+.linkedin {
+  display: inline-block;
+  background-color: #0077b5;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.linkedin:hover {
+  background-color: #005f8d;
+  box-shadow: 0 6px 20px rgba(0, 119, 181, 0.5);
+  transform: translateY(-3px);
 }
 
 /* for mobile */
@@ -181,6 +200,38 @@ nav {
 
 .show-links {
   height: 10rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.tech-stack span {
+  background: #e0e3e7;
+  color: #333;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease; /* smooth hover for border and shadow */
+  border: 2px solid transparent; /* reserve space for border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* subtle default shadow */
+}
+
+.tech-stack span:hover {
+  /* border: 2px solid #0077b5;  */
+  box-shadow: 0 4px 12px rgba(0, 119, 181, 0.4); /* glowing blue shadow */
+  transform: translateY(-2px); /* subtle lift effect */
+}
+
+.highlights ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
 }
 
 /* GitHub button styles */
