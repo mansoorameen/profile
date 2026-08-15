@@ -107,8 +107,29 @@ portfolio link from LinkedIn on a phone.
 
 One long home page, in this order:
 
-1. **Hero** — name, one-sentence positioning, stack line, availability,
-   buttons for Resume, GitHub, LinkedIn.
+1. **Hero** — name, one-sentence positioning, subline, status line, and
+   buttons for Resume, GitHub, LinkedIn. The AI-first workflow surfaces
+   here rather than waiting for section 4, because it is a current hiring
+   signal and the hero is what a six-second scanner reads. It appears
+   twice: as a label beside the availability status, and as the second
+   sentence of the subline. The headline itself stays about what is built,
+   so the work remains the identity and the workflow supports it.
+
+   Status line: `● Open to opportunities` and `AI-first engineer`, both set
+   in monospace at label size and identical weight. As a colored chip or
+   badge the tag reads as a buzzword, which would undercut the restraint
+   the visual direction depends on.
+
+   Subline copy:
+
+   > Six years shipping React, React Native and Next.js. I work AI-first —
+   > spec, build, test, review — and it's how I picked up Flutter and
+   > NestJS and shipped in my first week.
+
+   The phrase "10x faster" and comparable throughput claims are excluded
+   deliberately. They are discounted by the senior engineers most likely to
+   be evaluating this page, and the concrete first-week result carries the
+   same meaning without the credibility cost.
 2. **Proof strip** — 6+ years shipping / 4 platforms shipped to (web, iOS,
    Android, desktop) / Expo 2020 Dubai, onsite / 1.9K reads on one post.
    Chosen over an app count: "10+ apps" invites the question "which ten?"
