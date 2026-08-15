@@ -41,3 +41,14 @@ test('banned copy stays out of the page', () => {
     assert.doesNotMatch(html, banned);
   }
 });
+
+test('the hero carries the AI-first signal', () => {
+  assert.match(html, /AI-first engineer/);
+  assert.match(html, /I work AI-first/);
+});
+
+test('the proof strip renders all four stats', () => {
+  for (const stat of profile.stats) {
+    assert.ok(html.includes(stat.label), `missing stat: ${stat.label}`);
+  }
+});
