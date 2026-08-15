@@ -1501,7 +1501,7 @@ Create `public/_redirects`. Netlify reads this file from the publish directory. 
 /blogs/morning.html        https://mansoorameen.hashnode.dev/                                         301!
 ```
 
-The android and morning posts redirect to the Hashnode index because their individual slugs are not recorded in the old HTML. Before shipping, check `https://mansoorameen.hashnode.dev/` for their real URLs and use those instead if they exist.
+The android and morning posts redirect to the Hashnode index rather than to individual posts. Their slugs are not recorded in the old HTML, and landing on the blog index is a good enough outcome for two old links. This is deliberate — do not spend time hunting for the exact URLs.
 
 - [ ] **Step 4: Add robots.txt**
 
