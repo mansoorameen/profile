@@ -79,3 +79,15 @@ test('roles excluded from the site stay off the page', () => {
     assert.doesNotMatch(html, excluded);
   }
 });
+
+test('the real email address is on the page', () => {
+  assert.ok(html.includes(`mailto:${profile.links.email}`));
+});
+
+test('the footer stamps when the site was last updated', () => {
+  assert.ok(html.includes(profile.lastUpdated));
+});
+
+test('the excluded side project stays off the page', () => {
+  assert.doesNotMatch(html, /coronavirus/i);
+});

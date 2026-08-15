@@ -1,0 +1,59 @@
+---
+import writing from '../../content/writing.json';
+import profile from '../../content/profile.json';
+---
+<ul class="posts">
+  {writing.map((post) => (
+    <li>
+      <a href={post.url} rel="noopener">
+        <span class="title">{post.title}</span>
+        {post.note && <span class="mono note">{post.note}</span>}
+      </a>
+    </li>
+  ))}
+</ul>
+
+<p class="more">
+  <a href={profile.links.hashnode} rel="noopener">All posts on Hashnode</a>
+</p>
+
+<style>
+  .posts { list-style: none; margin: 0; padding: 0; }
+
+  .posts li { border-bottom: 1px solid var(--hairline); }
+
+  .posts a {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    min-height: 44px;
+    padding: var(--space-4) 0;
+    text-decoration: none;
+    transition: color 120ms ease-out;
+  }
+
+  .title { font-size: var(--text-md); }
+
+  .posts a:hover .title { color: var(--accent); }
+
+  .more { margin-top: var(--space-5); }
+
+  .more a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  @media (min-width: 48rem) {
+    .posts a {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--space-5);
+    }
+    .note { white-space: nowrap; }
+  }
+</style>
