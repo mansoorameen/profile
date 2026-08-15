@@ -65,3 +65,17 @@ test('the how-i-build section names the process and the outcome', () => {
   assert.match(html, /Claude Code/);
   assert.match(html, /first week/);
 });
+
+import experience from '../content/experience.json' with { type: 'json' };
+
+test('every current role renders', () => {
+  for (const role of experience) {
+    assert.ok(html.includes(role.company), `missing role: ${role.company}`);
+  }
+});
+
+test('roles excluded from the site stay off the page', () => {
+  for (const excluded of [/TheTravelights/i, /Diya Systems/i, /WordPress/i, /Freelance/i]) {
+    assert.doesNotMatch(html, excluded);
+  }
+});

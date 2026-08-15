@@ -1,0 +1,67 @@
+---
+import experience from '../../content/experience.json';
+import profile from '../../content/profile.json';
+---
+<ol class="roles">
+  {experience.map((role) => (
+    <li>
+      <div class="row">
+        <h3>{role.company}</h3>
+        <span class="mono">{role.period}</span>
+      </div>
+      <p class="role">{role.role}</p>
+      <ul class="bullets">
+        {role.bullets.map((b) => <li>{b}</li>)}
+      </ul>
+    </li>
+  ))}
+</ol>
+
+<p class="more">
+  <a href={profile.links.resume}>Full resume (PDF)</a>
+</p>
+
+<style>
+  .roles { list-style: none; margin: 0; padding: 0; }
+
+  .roles > li {
+    padding: var(--space-5) 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .roles > li:first-child { padding-top: 0; }
+
+  .row { display: flex; flex-direction: column; gap: var(--space-1); }
+
+  h3 { font-size: var(--text-md); }
+
+  .role { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--accent); margin-top: var(--space-1); }
+
+  .bullets { margin: var(--space-3) 0 0; padding-left: var(--space-4); color: var(--muted); }
+  .bullets li { margin-bottom: var(--space-2); max-width: 38em; }
+
+  .more { margin-top: var(--space-5); }
+
+  .more a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: var(--text-sm);
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--hairline);
+    transition: border-color 120ms ease-out;
+  }
+
+  .more a:hover { border-color: var(--text); }
+
+  @media (min-width: 48rem) {
+    .row {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--space-5);
+    }
+    .row .mono { white-space: nowrap; }
+  }
+</style>
