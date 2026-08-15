@@ -2,6 +2,9 @@
 import Base from '../layouts/Base.astro';
 import Hero from '../components/Hero.astro';
 import ProofStrip from '../components/ProofStrip.astro';
+import Section from '../components/Section.astro';
+import Work from '../components/Work.astro';
+import HowIBuild from '../components/HowIBuild.astro';
 ---
 <Base
   title="Mansoor Ameen — Frontend Engineer"
@@ -9,4 +12,6 @@ import ProofStrip from '../components/ProofStrip.astro';
 >
   <Hero />
   <ProofStrip />
+  <Section num="01" title="Selected work" id="work"><Work /></Section>
+  <Section num="02" title="How I build" id="how-i-build"><HowIBuild /></Section>
 </Base>

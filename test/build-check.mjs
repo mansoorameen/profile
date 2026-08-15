@@ -52,3 +52,16 @@ test('the proof strip renders all four stats', () => {
     assert.ok(html.includes(stat.label), `missing stat: ${stat.label}`);
   }
 });
+
+import work from '../content/work.json' with { type: 'json' };
+
+test('every selected work entry renders', () => {
+  for (const item of work) {
+    assert.ok(html.includes(item.title), `missing work entry: ${item.title}`);
+  }
+});
+
+test('the how-i-build section names the process and the outcome', () => {
+  assert.match(html, /Claude Code/);
+  assert.match(html, /first week/);
+});
