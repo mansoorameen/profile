@@ -117,21 +117,43 @@ One long home page, in this order:
 3. **Selected Work** — three entries: the React Native rebuild and
    client/staff split, Shownex, and Expo 2020 Dubai. Each has a title, a
    two-sentence outcome-focused description, and a technology line.
-4. **About** — short. Absorbs the AI-assisted-workflow point in one clause
-   rather than getting its own section.
-5. **Experience** — Shownex (3 bullets), BuildNext (3), Viga (2), followed
+4. **How I Build** — a highlighted section, not a skills pill. Names the
+   process (brainstorm, written spec, implementation, testing, review),
+   names the tool (Claude Code), and carries a measurable outcome (picked
+   up Flutter and NestJS and shipped features in the first week on each).
+   Specificity is the point: a generic "I use AI tools" claim is the most
+   common line on a 2026 portfolio and does not differentiate, while a
+   named process plus a named tool plus a concrete result is not something
+   an engineer who does not work this way could write. Given prominence
+   through typographic treatment rather than decoration.
+5. **About** — short, and does not repeat the AI material now that it has
+   its own section.
+6. **Experience** — Shownex (3 bullets), BuildNext (3), Viga (2), followed
    by a link to the full resume.
-6. **Technical Stack** — grouped as Frontend / Mobile / Backend / Tools.
-7. **Writing** — links out to Hashnode, leading with the 1.9K-view post and
+7. **Technical Stack** — grouped as Frontend / Mobile / Backend / Tools.
+8. **Writing** — links out to Hashnode, leading with the 1.9K-view post and
    its daily.dev feature.
-8. **Experiments** — the auth-flow project only.
-9. **Contact** — email, LinkedIn, GitHub, and the footer `lastUpdated`
+9. **Experiments** — the auth-flow project only.
+10. **Contact** — email, LinkedIn, GitHub, and the footer `lastUpdated`
    stamp.
+
+## Approved Copy — How I Build
+
+> I work AI-first, with a real process behind it: brainstorm, then a
+> written spec, then implementation, testing, and review. Claude Code does
+> most of the typing. I own the architecture, the review, and what ships.
+>
+> The practical effect is range. I picked up Flutter and NestJS and shipped
+> features in my first week on each — not by skipping the fundamentals, but
+> by compressing the loop between reading, building, and validating.
+
+"Does most of the typing" is deliberate over "writes the code": it is
+accurate and keeps the engineer, not the tool, as the subject. Naming the
+mechanism — compressing the loop — rather than only claiming speed is what
+convinces a skeptical senior reader.
 
 ## Excluded
 
-- A "How I Build / AI-first" section. Folded into About as one clause;
-  as a standalone section it reads as filler in 2026.
 - Freelance, TheTravelights (WordPress), and Diya Systems (technical
   support) from Experience. The resume keeps them for continuous history;
   on the site they dilute a senior engineering frame.
