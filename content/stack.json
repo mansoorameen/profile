@@ -1,0 +1,6 @@
+[
+  { "group": "Frontend", "items": ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Material UI", "Shadcn UI"] },
+  { "group": "Mobile", "items": ["React Native", "Flutter", "Dart", "Deep Linking", "OTA Updates", "iOS", "Android"] },
+  { "group": "Backend", "items": ["Node.js", "NestJS", "REST APIs", "Firebase", "Elasticsearch"] },
+  { "group": "Tools", "items": ["Redux", "Zustand", "Electron", "Jest", "Git", "Chart.js", "D3.js", "Mapbox"] }
+]

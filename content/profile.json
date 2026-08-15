@@ -1,0 +1,29 @@
+{
+  "name": "Mansoor Ameen",
+  "role": "Frontend Engineer",
+  "headline": "Frontend engineer building production web and mobile applications.",
+  "subline": "Six years shipping React, React Native and Next.js. I work AI-first — spec, build, test, review — and it's how I picked up Flutter and NestJS and shipped in my first week.",
+  "status": "Open to opportunities",
+  "tag": "AI-first engineer",
+  "location": "Kasaragod, Kerala",
+  "experienceYears": "6+ years",
+  "about": "I build production web and mobile applications, mostly with React, React Native, Next.js and TypeScript. I've rebuilt legacy mobile systems from the ground up, split a single product into separate client and staff apps, and shipped to the web, both app stores, and the desktop. Lately that has extended into Flutter on mobile and NestJS on the backend.",
+  "howIBuild": {
+    "lead": "I work AI-first, with a real process behind it: brainstorm, then a written spec, then implementation, testing, and review. Claude Code does most of the typing. I own the architecture, the review, and what ships.",
+    "body": "The practical effect is range. I picked up Flutter and NestJS and shipped features in my first week on each — not by skipping the fundamentals, but by compressing the loop between reading, building, and validating."
+  },
+  "stats": [
+    { "value": "6+", "label": "Years shipping" },
+    { "value": "4", "label": "Platforms shipped to" },
+    { "value": "Expo 2020", "label": "Dubai, onsite" },
+    { "value": "1.9K", "label": "Reads on one post" }
+  ],
+  "links": {
+    "email": "manzooravail@gmail.com",
+    "github": "https://github.com/mansoorameen",
+    "linkedin": "https://linkedin.com/in/mansoorameenkm",
+    "hashnode": "https://mansoorameen.hashnode.dev/",
+    "resume": "https://docs.google.com/document/d/1ZGxBr2mUVSRxOU6l7IFxTEEZ0vYpU--6Dh2ZV_8lDk4/export?format=pdf"
+  },
+  "lastUpdated": "August 2026"
+}
