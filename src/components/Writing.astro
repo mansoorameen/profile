@@ -32,9 +32,13 @@ import profile from '../../content/profile.json';
     transition: color 120ms ease-out;
   }
 
-  .title { font-size: var(--text-md); }
+  .title {
+    font-size: var(--text-md);
+    border-bottom: 1px solid var(--hairline);
+    align-self: flex-start;
+  }
 
-  .posts a:hover .title { color: var(--accent); }
+  .posts a:hover .title { color: var(--text); }
 
   .more { margin-top: var(--space-5); }
 
