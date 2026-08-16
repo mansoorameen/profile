@@ -423,7 +423,7 @@ Create `content/profile.json`. The `subline` and `howIBuild` strings are the spe
   "subline": "Six years shipping React, React Native and Next.js. I work AI-first — spec, build, test, review — and it's how I picked up Flutter and NestJS and shipped in my first week.",
   "status": "Open to opportunities",
   "tag": "AI-first engineer",
-  "location": "Kasaragod, Kerala",
+  "location": "Kerala, India",
   "experienceYears": "6+ years",
   "about": "I build production web and mobile applications, mostly with React, React Native, Next.js and TypeScript. I've rebuilt legacy mobile systems from the ground up, split a single product into separate client and staff apps, and shipped to the web, both app stores, and the desktop. Lately that has extended into Flutter on mobile and NestJS on the backend.",
   "howIBuild": {
