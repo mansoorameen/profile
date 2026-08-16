@@ -154,8 +154,7 @@ One long home page, in this order:
 7. **Technical Stack** — grouped as Frontend / Mobile / Backend / Tools.
 8. **Writing** — links out to Hashnode, leading with the 1.9K-view post and
    its daily.dev feature.
-9. **Experiments** — the auth-flow project only.
-10. **Contact** — email, LinkedIn, GitHub, and the footer `lastUpdated`
+9. **Contact** — email, LinkedIn, GitHub, and the footer `lastUpdated`
    stamp.
 
 ## Approved Copy — How I Build
@@ -178,6 +177,9 @@ convinces a skeptical senior reader.
 - Freelance, TheTravelights (WordPress), and Diya Systems (technical
   support) from Experience. The resume keeps them for continuous history;
   on the site they dilute a senior engineering frame.
+- The Experiments section entirely. It was originally scoped to carry the
+  auth-flow side project, but next to the production work it read as a
+  weaker entry, so the section was dropped after the page was built.
 - The coronavirus Chrome extension.
 - Self-hosted blog pages, which split search ranking against the Hashnode
   originals.
