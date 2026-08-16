@@ -91,3 +91,22 @@ test('the footer stamps when the site was last updated', () => {
 test('the excluded side project stays off the page', () => {
   assert.doesNotMatch(html, /coronavirus/i);
 });
+
+test('redirects ship with the build', () => {
+  const redirects = readFileSync('dist/_redirects', 'utf8');
+  for (const path of ['/about.html', '/projects.html', '/blogs/howjsworks.html']) {
+    assert.ok(redirects.includes(path), `missing redirect for ${path}`);
+  }
+});
+
+test('the brave rewards verification file survives the migration', () => {
+  assert.ok(existsSync('dist/.well-known/brave-rewards-verification.txt'));
+});
+
+test('the social card image is deployed', () => {
+  assert.ok(existsSync('dist/og.png'));
+});
+
+test('a sitemap is generated', () => {
+  assert.ok(existsSync('dist/sitemap-index.xml'));
+});
