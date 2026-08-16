@@ -1,0 +1,47 @@
+---
+import work from '../../content/work.json';
+---
+<ol class="entries">
+  {work.map((item) => (
+    <li>
+      <div class="row">
+        <h3>{item.title}</h3>
+        <span class="mono">{item.meta}</span>
+      </div>
+      <p>{item.description}</p>
+      <p class="tech">{item.tech.join('  ·  ')}</p>
+    </li>
+  ))}
+</ol>
+
+<style>
+  .entries { list-style: none; margin: 0; padding: 0; }
+
+  li {
+    padding: var(--space-5) 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  li:last-child { border-bottom: 0; padding-bottom: 0; }
+  li:first-child { padding-top: 0; }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  h3 { font-size: var(--text-lg); }
+
+  p { color: var(--muted); margin-top: var(--space-2); max-width: 38em; }
+
+  @media (min-width: 48rem) {
+    .row {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: var(--space-5);
+    }
+    .row .mono { white-space: nowrap; }
+  }
+</style>

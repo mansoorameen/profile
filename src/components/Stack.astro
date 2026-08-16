@@ -1,0 +1,31 @@
+---
+import stack from '../../content/stack.json';
+---
+<dl class="stack">
+  {stack.map((group) => (
+    <div class="group">
+      <dt class="mono">{group.group}</dt>
+      <dd>{group.items.join('  ·  ')}</dd>
+    </div>
+  ))}
+</dl>
+
+<style>
+  .stack { margin: 0; }
+
+  .group {
+    padding: var(--space-4) 0;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .group:last-child { border-bottom: 0; }
+
+  dt { margin-bottom: var(--space-2); }
+
+  dd { margin: 0; color: var(--muted); max-width: 38em; }
+
+  @media (min-width: 48rem) {
+    .group { display: grid; grid-template-columns: 8rem 1fr; gap: var(--space-5); align-items: baseline; }
+    dt { margin-bottom: 0; }
+  }
+</style>

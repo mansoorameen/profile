@@ -1,0 +1,58 @@
+---
+import profile from '../../content/profile.json';
+const { stats } = profile;
+---
+<ul class="strip">
+  {stats.map((s) => (
+    <li>
+      <span class="value">{s.value}</span>
+      <span class="label">{s.label}</span>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .strip {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  li {
+    padding: var(--space-5) var(--space-4);
+    border-right: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  li:nth-child(2n) { border-right: 0; }
+  li:nth-last-child(-n + 2) { border-bottom: 0; }
+
+  .value {
+    display: block;
+    font-size: var(--text-xl);
+    font-weight: 650;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  .label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: var(--space-2);
+  }
+
+  @media (min-width: 48rem) {
+    .strip { grid-template-columns: repeat(4, 1fr); }
+    li:nth-child(2n) { border-right: 1px solid var(--hairline); }
+    li:last-child { border-right: 0; }
+    li { border-bottom: 0; }
+  }
+</style>

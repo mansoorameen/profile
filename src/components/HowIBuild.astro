@@ -1,0 +1,24 @@
+---
+import profile from '../../content/profile.json';
+const { lead, body } = profile.howIBuild;
+---
+<div class="build">
+  <p class="lead">{lead}</p>
+  <p class="body">{body}</p>
+</div>
+
+<style>
+  .build { border-left: 2px solid var(--accent); padding-left: var(--space-5); }
+
+  .lead {
+    font-size: var(--text-md);
+    color: var(--text);
+    letter-spacing: -0.01em;
+  }
+
+  .body { color: var(--muted); margin-top: var(--space-4); }
+
+  @media (min-width: 48rem) {
+    .lead { font-size: var(--text-lg); line-height: 1.5; }
+  }
+</style>

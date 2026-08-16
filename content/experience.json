@@ -1,0 +1,31 @@
+[
+  {
+    "company": "Shownex",
+    "role": "Frontend Engineer",
+    "period": "Nov 2025 – Present",
+    "bullets": [
+      "Build web and mobile features for a movie discovery product using Next.js, TypeScript, Zustand and Tailwind CSS.",
+      "Implemented mobile deep linking and over-the-air updates, and contributed to the Flutter app and the NestJS backend.",
+      "Optimise data fetching and rendering, and work across product, backend and mobile to resolve cross-platform issues."
+    ]
+  },
+  {
+    "company": "BuildNext Constructions",
+    "role": "Frontend Developer",
+    "period": "Dec 2022 – Oct 2025",
+    "bullets": [
+      "Rebuilt the company's legacy React Native app from the ground up, replacing a bug-prone class-component architecture.",
+      "Split the product into separate client and staff apps, then extended it into a rebranded B2B app for a business client.",
+      "Built web features in React and Next.js, including a dashboard rendering coordinate data with HTML Canvas."
+    ]
+  },
+  {
+    "company": "Viga Entertainment Technologies",
+    "role": "Frontend Developer",
+    "period": "Aug 2021 – Nov 2022",
+    "bullets": [
+      "Built React web applications and contributed to a Windows desktop app in Electron, TypeScript and React.",
+      "Designed and implemented a single sign-on web application, and was selected for the onsite Expo 2020 Dubai project."
+    ]
+  }
+]

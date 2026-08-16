@@ -1,0 +1,102 @@
+---
+import profile from '../../content/profile.json';
+const { name, headline, subline, status, tag, location, experienceYears, links } = profile;
+---
+<header class="hero">
+  <p class="name">{name}</p>
+
+  <p class="status">
+    <span class="dot" aria-hidden="true"></span>{status}
+    <span class="sep" aria-hidden="true">·</span>
+    <span class="tag">{tag}</span>
+  </p>
+
+  <h1>{headline}</h1>
+  <p class="subline">{subline}</p>
+  <p class="mono meta">{location} &nbsp;·&nbsp; {experienceYears}</p>
+
+  <p class="actions">
+    <a class="primary" href={links.resume}>Resume</a>
+    <a class="secondary" href={links.github} rel="noopener">GitHub</a>
+    <a class="secondary" href={links.linkedin} rel="noopener">LinkedIn</a>
+  </p>
+</header>
+
+<style>
+  .hero { padding: var(--space-8) 0 var(--space-7); }
+
+  .name {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--text);
+    letter-spacing: 0.04em;
+    margin-bottom: var(--space-5);
+  }
+
+  .status {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    color: var(--status);
+    letter-spacing: 0.04em;
+    margin-bottom: var(--space-5);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--status);
+    display: inline-block;
+  }
+
+  .sep, .tag { color: var(--faint); }
+
+  h1 {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    letter-spacing: -0.035em;
+    max-width: 13em;
+  }
+
+  .subline {
+    font-size: var(--text-base);
+    color: var(--muted);
+    margin-top: var(--space-5);
+  }
+
+  .meta { margin-top: var(--space-4); }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-6);
+  }
+
+  .actions a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 var(--space-4);
+    border-radius: 5px;
+    font-size: var(--text-sm);
+    text-decoration: none;
+    transition: background 120ms ease-out, border-color 120ms ease-out;
+  }
+
+  .primary { background: var(--text); color: var(--bg); font-weight: 600; }
+  .primary:hover { background: var(--accent); }
+
+  .secondary { border: 1px solid var(--hairline); color: var(--muted); }
+  .secondary:hover { border-color: var(--faint); color: var(--text); }
+
+  @media (min-width: 48rem) {
+    .hero { padding: var(--space-9) 0 var(--space-8); }
+    h1 { font-size: var(--text-3xl); }
+    .subline { font-size: var(--text-md); }
+  }
+</style>

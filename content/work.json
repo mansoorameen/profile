@@ -1,0 +1,20 @@
+[
+  {
+    "title": "React Native Application Rebuild",
+    "meta": "BuildNext · 2022–25",
+    "description": "Rebuilt a bug-prone class-component mobile app into a modern functional architecture, then split it into two production apps — one for clients, one for internal staff — so each could evolve and ship independently. Later extended the same product into a rebranded B2B app for a business client.",
+    "tech": ["react-native", "redux", "rest", "ota-updates"]
+  },
+  {
+    "title": "Shownex",
+    "meta": "Shownex · 2025–present",
+    "description": "A movie discovery product spanning web and mobile. Built features across a Next.js and TypeScript web app and a Flutter mobile app, implemented deep linking so shared links open the installed app or fall through to the right store, and shipped OTA updates that reach users without an app-store release.",
+    "tech": ["next.js", "typescript", "flutter", "nestjs", "deep-linking"]
+  },
+  {
+    "title": "Expo 2020 Dubai — AR Live Ops",
+    "meta": "Onsite, Dubai · 2021",
+    "description": "Worked onsite on one of the largest augmented reality deployments at Expo 2020. Built a React and Mapbox application to track and visualise AR anchors across the Expo site, and supported testing and live operations for the Expo Xplorer app.",
+    "tech": ["react", "mapbox", "ar", "live-ops"]
+  }
+]

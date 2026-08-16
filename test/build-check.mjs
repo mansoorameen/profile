@@ -1,0 +1,112 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync, existsSync } from 'node:fs';
+
+const html = existsSync('dist/index.html')
+  ? readFileSync('dist/index.html', 'utf8')
+  : '';
+
+test('the site builds an index page', () => {
+  assert.ok(existsSync('dist/index.html'), 'run `npm run build` first');
+});
+
+test('the page names Mansoor Ameen', () => {
+  assert.match(html, /Mansoor Ameen/);
+});
+
+test('the page declares a viewport for mobile', () => {
+  assert.match(html, /name="viewport" content="width=device-width/);
+});
+
+test('social cards get an absolute image URL', () => {
+  assert.match(html, /property="og:image" content="https:\/\//);
+});
+
+test('the google site verification token is preserved', () => {
+  assert.match(html, /O7EjhQgHhRfxUaWkLhkMzkx0YW1UdKvvPmZ9fbsVVAg/);
+});
+
+import profile from '../content/profile.json' with { type: 'json' };
+
+test('the resume link downloads a PDF rather than opening a Doc', () => {
+  assert.match(profile.links.resume, /export\?format=pdf$/);
+});
+
+test('no contact placeholder survives from the old site', () => {
+  assert.doesNotMatch(html, /your-email@gmail\.com/);
+});
+
+test('banned copy stays out of the page', () => {
+  for (const banned of [/10x/i, /rockstar/i, /\bninja\b/i, /4\+ years/]) {
+    assert.doesNotMatch(html, banned);
+  }
+});
+
+test('the hero carries the AI-first signal', () => {
+  assert.match(html, /AI-first engineer/);
+  assert.match(html, /I work AI-first/);
+});
+
+test('the proof strip renders all four stats', () => {
+  for (const stat of profile.stats) {
+    assert.ok(html.includes(stat.label), `missing stat: ${stat.label}`);
+  }
+});
+
+import work from '../content/work.json' with { type: 'json' };
+
+test('every selected work entry renders', () => {
+  for (const item of work) {
+    assert.ok(html.includes(item.title), `missing work entry: ${item.title}`);
+  }
+});
+
+test('the how-i-build section names the process and the outcome', () => {
+  assert.match(html, /Claude Code/);
+  assert.match(html, /first week/);
+});
+
+import experience from '../content/experience.json' with { type: 'json' };
+
+test('every current role renders', () => {
+  for (const role of experience) {
+    assert.ok(html.includes(role.company), `missing role: ${role.company}`);
+  }
+});
+
+test('roles excluded from the site stay off the page', () => {
+  for (const excluded of [/TheTravelights/i, /Diya Systems/i, /WordPress/i, /Freelance/i]) {
+    assert.doesNotMatch(html, excluded);
+  }
+});
+
+test('the real email address is on the page', () => {
+  assert.ok(html.includes(`mailto:${profile.links.email}`));
+});
+
+test('the footer stamps when the site was last updated', () => {
+  assert.ok(html.includes(profile.lastUpdated));
+});
+
+test('the excluded side project stays off the page', () => {
+  assert.doesNotMatch(html, /coronavirus/i);
+});
+
+test('redirects ship with the build', () => {
+  const redirects = readFileSync('dist/_redirects', 'utf8');
+  for (const path of ['/about.html', '/projects.html', '/blogs/howjsworks.html']) {
+    assert.ok(redirects.includes(path), `missing redirect for ${path}`);
+  }
+});
+
+test('the brave rewards verification file survives the migration', () => {
+  assert.ok(existsSync('dist/.well-known/brave-rewards-verification.txt'));
+});
+
+test('the social card image is deployed', () => {
+  assert.ok(existsSync('dist/og.png'));
+});
+
+test('a sitemap is generated', () => {
+  assert.ok(existsSync('dist/sitemap-index.xml'));
+});

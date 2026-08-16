@@ -1,0 +1,41 @@
+---
+import profile from '../../content/profile.json';
+const { email, github, linkedin } = profile.links;
+---
+<div class="contact">
+  <p class="line">
+    <a href={`mailto:${email}`}>{email}</a>
+  </p>
+  <p class="line">
+    <a href={github} rel="noopener">GitHub</a>
+    <a href={linkedin} rel="noopener">LinkedIn</a>
+  </p>
+</div>
+
+<footer class="foot">
+  <p class="mono">Last updated {profile.lastUpdated}</p>
+</footer>
+
+<style>
+  .line { display: flex; flex-wrap: wrap; gap: var(--space-5); }
+
+  .line + .line { margin-top: var(--space-3); }
+
+  .line a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: var(--text-md);
+    text-decoration: none;
+    border-bottom: 1px solid var(--hairline);
+    transition: border-color 120ms ease-out;
+  }
+
+  .line a:hover { border-color: var(--text); }
+
+  .foot {
+    border-top: 1px solid var(--hairline);
+    padding: var(--space-5) 0 var(--space-7);
+    margin-top: var(--space-7);
+  }
+</style>
